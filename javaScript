@@ -1,1 +1,5 @@
-let hi = 1
+let numberOfClicks = 0
+numberOfClicks = 100
+if (numberOfClicks == 100) {
+  console.log("you win!")
+}
