@@ -4,11 +4,23 @@
 <button id="incrementButton">
   <head>
     <script src="javaScript.js" defer>
-      numberOfClicks++;
+      numberOfClicks += clickAmount;
       
     </script>
   </head>
-    change your score by one
+    change your score by <span id="clickAmount"></span> points
 </button>
 
-<h6> your score is: <span id="numberOfClicks"></span> </h6>
+<h20> your score is: <span id="numberOfClicks"></span> </h20>
+<br>
+<br>
+<button id="buy10Button">
+  <head>
+    <script src="javaScript.js" defer>
+      numberOfClicks -= 10*clickAmount;
+      clickAmount += 1;
+      
+    </script>
+  </head>
+    cost the click amount *10 <span id="numberOfClicks"></span>  points to increase your click amount by 1
+</button>
