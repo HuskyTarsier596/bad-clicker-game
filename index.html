@@ -17,10 +17,22 @@
 <button id="buy10Button">
   <head>
     <script src="javaScript.js" defer>
-      numberOfClicks -= 10*clickAmount;
+      numberOfClicks -= 25*clickAmount;
       clickAmount += 1;
       
     </script>
   </head>
-    cost the click amount *10 <span id="numberOfClicks"></span>  points to increase your click amount by 1
+    cost the click amount *25 for each level <span id="numberOfClicks"></span>  points to increase your click amount by 1
+</button>
+<br>
+
+<br>
+<button id="scorePerSecond1Button">
+  <head>
+    <script src="javaScript.js" defer>
+        numberOfClicks -= 100*(cPS*10);
+        cPS += 1;
+    </script>
+  </head>
+    cost 100 points*(CPS*10) for each level
 </button>

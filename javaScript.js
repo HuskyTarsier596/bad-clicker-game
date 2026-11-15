@@ -1,7 +1,10 @@
 const button = document.getElementById(`incrementButton`)
 const buy10Button = document.getElementById(`buy10Button`)
+const buy1CPSButton = document.getElementById(`scorePerSecond1Button`)
 let clickAmount = 1  
 let numberOfClicks = 0
+let cPS = 0
+
 
 button.addEventListener('click', () => {
   numberOfClicks += clickAmount;
@@ -15,4 +18,18 @@ buy10Button.addEventListener('click', () => {
     document.getElementById("numberOfClicks").textContent = numberOfClicks;
     document.getElementById("clickAmount").textContent = clickAmount;
   }
+});
+
+buy1CPSButton.addEventListener('click', () => {
+  if (numberOfClicks >= 100*(cPS*10)) {
+    numberOfClicks -= 100*(cPS*10);
+    cPS += 1;
+    document.getElementById("cPS").textContent = cPS;
+  }
+})
+
+numberOfClicks.onUpdate(() => {
+  numberOfClicks += cPS;
+  document.getElementById("numberOfClicks").textContent = numberOfClicks;
+
 });
