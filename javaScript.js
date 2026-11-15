@@ -21,15 +21,14 @@ buy10Button.addEventListener('click', () => {
 });
 
 buy1CPSButton.addEventListener('click', () => {
-  if (numberOfClicks >= 100*(cPS*10)) {
-    numberOfClicks -= 100*(cPS*10);
+  if (numberOfClicks >= 100*(cPS*3)) {
+    numberOfClicks -= 100*(cPS*3);
     cPS += 1;
     document.getElementById("cPS").textContent = cPS;
   }
 })
 
-numberOfClicks.onUpdate(() => {
+setInterval(() => {
   numberOfClicks += cPS;
   document.getElementById("numberOfClicks").textContent = numberOfClicks;
-
-});
+}, 1000);
