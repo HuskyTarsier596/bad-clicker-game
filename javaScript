@@ -1,6 +1,0 @@
-let numberOfClicks = 0
-numberOfClicks = 100
-if (numberOfClicks == 100) {
-  alert("You Win! Good Job!")
-  numberOfClicks++
-}
